@@ -26,9 +26,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
             ),
             SizedBox(height:  105.h),
             BottomRegisterContainer(onTapTextField: () {
-             
               setState(() {
-                scrollController.jumpTo(scrollController.position.maxScrollExtent);
+                scrollController.jumpTo(scrollController.position.maxScrollExtent-MediaQuery.of(context).viewInsets.bottom*0.3);
               });
             },),
             

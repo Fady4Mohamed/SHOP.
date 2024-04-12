@@ -30,8 +30,8 @@ class _LoginScreenState extends State<LoginScreen> {
             BottomLoginContainer(onTapTextField: () {
              
               setState(() {
-                scrollController.jumpTo(scrollController.position.maxScrollExtent);
-              });
+              scrollController.jumpTo(scrollController.position.maxScrollExtent-MediaQuery.of(context).viewInsets.bottom*0.3);
+               });
             },),
             
           ],
