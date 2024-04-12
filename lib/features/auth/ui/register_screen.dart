@@ -1,21 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:shop/features/auth/ui/widgets/bottome_login_container.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:shop/features/auth/ui/widgets/bottom_register_container.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+class RegisterScreen extends StatefulWidget {
+  const RegisterScreen({super.key});
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<RegisterScreen> createState() => _RegisterScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _RegisterScreenState extends State<RegisterScreen> {
   ScrollController scrollController=ScrollController();
-
   @override
   Widget build(BuildContext context) {
-    
     return Scaffold(
       body: SafeArea(
         child: ListView(
@@ -27,7 +25,7 @@ class _LoginScreenState extends State<LoginScreen> {
               height: 43.18.h,
             ),
             SizedBox(height:  105.h),
-            BottomLoginContainer(onTapTextField: () {
+            BottomRegisterContainer(onTapTextField: () {
              
               setState(() {
                 scrollController.jumpTo(scrollController.position.maxScrollExtent);

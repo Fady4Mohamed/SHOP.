@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shop/core/routing/app_router.dart';
 import 'package:shop/shop_app.dart';
 
 void main() {
@@ -11,6 +12,6 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return ShopApp();
+    return ShopApp(appRouter: AppRouter(),);
   }
 }

@@ -1,14 +1,15 @@
 
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:shop/core/helpers/exstintion.dart';
+import 'package:shop/core/routing/routes.dart';
 import 'package:shop/core/theming/styles.dart';
 import 'package:shop/core/widgets/button.dart';
 import 'package:shop/core/widgets/text_field.dart';
 import 'package:shop/features/auth/ui/widgets/welcome_text.dart';
 
-class BottomContainer extends StatelessWidget {
-  const BottomContainer({
+class BottomLoginContainer extends StatelessWidget {
+  const BottomLoginContainer({
     super.key, this.onTapTextField,
   });
   final void Function()? onTapTextField;
@@ -48,7 +49,7 @@ class BottomContainer extends StatelessWidget {
                 Text("Don't have an account? ",style: TextStyles.font14greyregular,),
                  GestureDetector(
                   onTap: () {
-                    
+                     context.pushNamed(Routes.registerScreen);
                   },
                   child: Text("Sign Up",style: TextStyles.font14greyregular.copyWith(color: Colors.white),)),
                 const Spacer()
