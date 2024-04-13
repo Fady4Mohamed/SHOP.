@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:shop/core/routing/routes.dart';
 import 'package:shop/features/auth/ui/login_screen.dart';
 import 'package:shop/features/auth/ui/register_screen.dart';
+import 'package:shop/features/home/ui/home_screen.dart';
 
 class AppRouter {
   Route generateRoute(RouteSettings settings) {
@@ -17,6 +18,10 @@ class AppRouter {
         case Routes.loginScreen:
         return MaterialPageRoute(
           builder: (_) => const LoginScreen(),
+        );
+        case Routes.homeScreen:
+        return MaterialPageRoute(
+          builder: (_) => const HomeScreen(),
         );
       // case Routes.loginScreen:
       //   return MaterialPageRoute(

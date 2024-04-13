@@ -6,17 +6,18 @@ import 'package:shop/core/theming/styles.dart';
 class ButtonApp extends StatelessWidget {
   const ButtonApp({ super.key,
     required this.onPressed,
-    required this.titel, 
+    required this.titel, this.color, 
   });
   final void Function()? onPressed;
   final String titel;
-
+  final Color? color;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
           width: 327.w,
           height: 56.h,
       child: TextButton(
+        
         onPressed: onPressed,
         child: Center(
             child: Text(
@@ -30,7 +31,7 @@ class ButtonApp extends StatelessWidget {
               return RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(15));
             }),
-            backgroundColor: MaterialStateProperty.all(ColorsManager.mainphosphorous )),
+            backgroundColor: MaterialStateProperty.all(color?? ColorsManager.mainphosphorous )),
       ),
     );
   }
