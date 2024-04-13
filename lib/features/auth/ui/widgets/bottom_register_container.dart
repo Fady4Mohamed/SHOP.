@@ -45,7 +45,9 @@ class _BottomRegisterContainerState extends State<BottomRegisterContainer> {
               icon: Icons.account_circle_outlined,
               hintText: 'E-mail',
               onChanged: (p0) {
-                email = p0;
+                setState(() {
+                  email = p0;
+                });
               },
               onTap: widget.onTapTextField,
             ),
@@ -57,14 +59,19 @@ class _BottomRegisterContainerState extends State<BottomRegisterContainer> {
               icon: Icons.key_outlined,
               hintText: 'Password',
               onChanged: (p0) {
-                password = p0;
+                setState(() {
+                  password = p0;
+                });
               },
               onTap: widget.onTapTextField,
             ),
             SizedBox(
               height: 30.h,
             ),
-            ButtonRegister(email: email,password: password,),
+            ButtonRegister(
+              email: email,
+              password: password,
+            ),
             SizedBox(
               height: 30.h,
             ),
@@ -93,4 +100,3 @@ class _BottomRegisterContainerState extends State<BottomRegisterContainer> {
     );
   }
 }
-

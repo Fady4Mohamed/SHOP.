@@ -5,54 +5,49 @@ import 'package:shop/core/helpers/exstintion.dart';
 import 'package:shop/core/routing/routes.dart';
 import 'package:shop/core/theming/color.dart';
 import 'package:shop/core/widgets/button.dart';
-import 'package:shop/features/auth/data/registercubit/register_cubit.dart';
+import 'package:shop/features/auth/data/logincubit/logincubit_cubit.dart';
 
-class ButtonRegister extends StatefulWidget {
-  const ButtonRegister({
-    super.key,
-    this.email,
-    this.password,
+class ButtonLogin extends StatefulWidget {
+  const ButtonLogin({
+    super.key, this.email, this.password,
   });
   final String? email;
   final String? password;
 
   @override
-  State<ButtonRegister> createState() => _ButtonRegisterState();
+  State<ButtonLogin> createState() => _ButtonLoginState();
 }
 
-class _ButtonRegisterState extends State<ButtonRegister> {
+class _ButtonLoginState extends State<ButtonLogin> {
   Color buttoncolor = ColorsManager.mainphosphorous;
   @override
   Widget build(BuildContext context) {
-    return BlocListener<RegisterCubit, RegisterState>(
-      listener: (context, state) async {
-        if (state is Registersuccess) {
+    return BlocListener<LoginCubit, loginState>(
+      listener: (context, state)async {
+        if (state is logincubitsuccess) {
           buttoncolor = Colors.green;
           setState(() {});
           context.pushNamed(Routes.homeScreen);
 
         }
-        if (state is Registerfailure) {
+        if (state is logincubitfailure) {
           buttoncolor = Colors.red;
           print(state.error);
           setState(() {});
           await Future.delayed(Duration(seconds: 1));
           buttoncolor = ColorsManager.mainphosphorous;
           setState(() {});
-        }   if (state is Registerloding) {
+        } if (state is logincubitloding)  {
           buttoncolor = Colors.yellow;
+          setState(() {});
         }
       },
-      child: ButtonApp(
-        onPressed: () {
+      child: ButtonApp(onPressed: () { 
           if (widget.email != null && widget.password != null) {
-            BlocProvider.of<RegisterCubit>(context)
-                .register(lemail: widget.email!, lpassword: widget.password!);
-          }
-        },
-        titel: 'Sign Up',
-        color: buttoncolor,
-      ),
+            BlocProvider.of<LoginCubit>(context)
+                .login(lemail: widget.email!, lpassword: widget.password!);
+          }     
+      }, titel: 'Log In',color: buttoncolor,),
     );
   }
 }
