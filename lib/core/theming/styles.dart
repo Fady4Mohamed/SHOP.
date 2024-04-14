@@ -15,4 +15,11 @@ class TextStyles {
     color: Colors.black,
     fontWeight: FontWeight.w700 
   );
+  static TextStyle font18simebolde = TextStyle(
+    fontSize: 18.sp,
+    fontWeight: FontWeight.w700 
+  );
+   static TextStyle font14 = TextStyle(
+    fontSize: 14.sp,
+  );
 }
