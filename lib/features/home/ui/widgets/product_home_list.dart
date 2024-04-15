@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:shop/features/home/ui/product_home_item.dart';
+import 'package:shop/features/home/ui/widgets/product_home_item.dart';
 
 class ProductHomelist extends StatelessWidget {
   const ProductHomelist({super.key});

@@ -22,4 +22,8 @@ class TextStyles {
    static TextStyle font14 = TextStyle(
     fontSize: 14.sp,
   );
+  static TextStyle font11Black = TextStyle(
+    fontSize: 11.sp,
+    color: Colors.black,
+  );
 }
