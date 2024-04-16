@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:shop/core/routing/routes.dart';
 import 'package:shop/features/auth/ui/login_screen.dart';
 import 'package:shop/features/auth/ui/register_screen.dart';
+import 'package:shop/features/category/ui/category_screen.dart';
 import 'package:shop/features/home/ui/home_screen.dart';
 
 class AppRouter {
@@ -22,6 +23,10 @@ class AppRouter {
         case Routes.homeScreen:
         return MaterialPageRoute(
           builder: (_) => const HomeScreen(),
+        );
+        case Routes.category:
+        return MaterialPageRoute(
+          builder: (_) => const CategoryScreen(),
         );
       // case Routes.loginScreen:
       //   return MaterialPageRoute(
