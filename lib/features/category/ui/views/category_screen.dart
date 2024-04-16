@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:shop/core/helpers/exstintion.dart';
+import 'package:shop/core/routing/routes.dart';
 import 'package:shop/core/widgets/featur_app_bar.dart';
 import 'package:shop/features/category/ui/widget/catecory_button.dart';
 
@@ -17,27 +19,38 @@ class CategoryScreen extends StatelessWidget {
             CategoryButton(
               imagename: 'assets/svgs/electronic-components-2.svg',
               name: 'Electronic',
-              onPressed: () {},
+              onPressed: () {
+                context.pushNamed(Routes.specificCategoryScreen,
+                    arguments: 'Electronic');
+              },
             ),
-             CategoryButton(
+            CategoryButton(
               imagename: 'assets/svgs/baby-56.svg',
               name: 'kide',
-              onPressed: () {},
+              onPressed: () {
+                context.pushNamed(Routes.specificCategoryScreen,
+                    arguments: 'kide');},
             ),
-             CategoryButton(
+            CategoryButton(
               imagename: 'assets/svgs/dog-28.svg',
               name: 'Pets',
-              onPressed: () {},
+              onPressed: () {
+                context.pushNamed(Routes.specificCategoryScreen,
+                    arguments: 'Pets');},
             ),
-             CategoryButton(
+            CategoryButton(
               imagename: 'assets/svgs/game-16.svg',
               name: 'Games',
-              onPressed: () {},
+              onPressed: () {
+                context.pushNamed(Routes.specificCategoryScreen,
+                    arguments: 'Games');},
             ),
-             CategoryButton(
+            CategoryButton(
               imagename: 'assets/svgs/t-shirt-59.svg',
               name: 'Fashion',
-              onPressed: () {},
+              onPressed: () {
+                context.pushNamed(Routes.specificCategoryScreen,
+                    arguments: 'Fashion');},
             ),
           ],
         ),
