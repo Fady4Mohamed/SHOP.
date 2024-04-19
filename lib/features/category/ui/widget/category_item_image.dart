@@ -15,7 +15,7 @@ class CategoryItemImage extends StatelessWidget {
         aspectRatio: 2.8 / 3.3,
         child: Container(
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(8),
+              borderRadius: BorderRadius.circular(8.w),
               image:
                   DecorationImage(image: AssetImage(image), fit: BoxFit.fill)),
         ),

@@ -6,6 +6,7 @@ import 'package:shop/features/auth/ui/register_screen.dart';
 import 'package:shop/features/category/ui/views/category_screen.dart';
 import 'package:shop/features/category/ui/views/specific_categories_screen.dart';
 import 'package:shop/features/home/ui/home_screen.dart';
+import 'package:shop/features/my%20product/ui/view/my_product_screen.dart';
 
 class AppRouter {
   Route generateRoute(RouteSettings settings) {
@@ -32,6 +33,10 @@ class AppRouter {
         case Routes.specificCategoryScreen:
         return MaterialPageRoute(
           builder: (_) =>  SpacificCategoriesScreen(categoryName: arguments as String ,),
+        );
+        case Routes.myProductScreen:
+        return MaterialPageRoute(
+          builder: (_) => const MyProductScreen(),
         );
 
       // case Routes.loginScreen:

@@ -35,8 +35,10 @@ class BottomHomeBar extends StatelessWidget {
           ),
           BottomIcon(
             icon: Icons.local_mall_outlined,
-            onPressed: () {},
-            name: 'My Prodct',
+            onPressed: () {
+              context.pushNamed(Routes.myProductScreen);
+            },
+            name: 'My Product',
           ),
           BottomIcon(
             icon: Icons.assignment_outlined,
