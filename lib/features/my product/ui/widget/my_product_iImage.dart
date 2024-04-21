@@ -14,7 +14,7 @@ class MyProductImage extends StatelessWidget {
           boxShadow: [
             BoxShadow(
               color:
-                  Colors.grey.withOpacity(0.4), // Color of the shadow
+                  Colors.grey.withOpacity(0.25), // Color of the shadow
               spreadRadius: .4, // Spread radius
               blurRadius: 20, // Blur radius
               offset: Offset(
