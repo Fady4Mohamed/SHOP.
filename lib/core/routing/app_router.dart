@@ -9,6 +9,7 @@ import 'package:shop/features/home/ui/home_screen.dart';
 import 'package:shop/features/my%20product/ui/view/add_product_screen.dart';
 import 'package:shop/features/my%20product/ui/view/my_product_screen.dart';
 import 'package:shop/features/orders/ui/screens/order_screen.dart';
+import 'package:shop/features/search/ui/screen/search_screen.dart';
 
 class AppRouter {
   Route generateRoute(RouteSettings settings) {
@@ -48,7 +49,10 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => const OrderScreen(),
         );
-
+        case Routes.searchScreen:
+        return MaterialPageRoute(
+          builder: (_) => const SearchScreen(),
+        );
       // case Routes.loginScreen:
       //   return MaterialPageRoute(
       //     builder: (_) => BlocProvider(
