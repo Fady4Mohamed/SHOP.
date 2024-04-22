@@ -42,7 +42,9 @@ class BottomHomeBar extends StatelessWidget {
           ),
           BottomIcon(
             icon: Icons.assignment_outlined,
-            onPressed: () {},
+            onPressed: () {
+              context.pushNamed(Routes.orderScreen);
+            },
             name: 'Orders',
           ),
           BottomIcon(

@@ -6,5 +6,6 @@ class Routes {
   static const String specificCategoryScreen = '/specificCategoryScreen';
   static const String myProductScreen = '/MyProductScreen';
   static const String addProductScreen = '/addProductScreen';
+  static const String orderScreen = '/orderScreen';
 
 }

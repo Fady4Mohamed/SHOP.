@@ -17,6 +17,7 @@ class AddBoody extends StatefulWidget {
 class _AddBoodyState extends State<AddBoody> {
   String? name;
   String? category;
+  String? description;
   double? salary;
   @override
   Widget build(BuildContext context) {
@@ -42,7 +43,7 @@ class _AddBoodyState extends State<AddBoody> {
                   height: 40.h,
                 ),
                 TextFieldApp(
-                  icon: Icons.monetization_on,
+                  icon: Icons.monetization_on_outlined,
                   hintText: 'food salary ',
                   onChanged: (p0) {
                     salary = double.parse(p0);
@@ -61,9 +62,19 @@ class _AddBoodyState extends State<AddBoody> {
                 SizedBox(
                   height: 40.h,
                 ),
+                TextFieldApp(
+                  icon: Icons.assignment_outlined,
+                  hintText: 'description',
+                  onChanged: (p0) {
+                    description = p0;
+                  },
+                ),
+                SizedBox(
+                  height: 80.h,
+                ),
                 ChoiceImage(),
                 SizedBox(
-                   height: 12.h,
+                   height: 20.h,
                 ),
                 ButtonApp(
                     onPressed: () async {

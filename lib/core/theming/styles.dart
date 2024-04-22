@@ -10,6 +10,8 @@ class TextStyles {
       TextStyle(fontSize: 14.sp, color: const Color(0xff808080));
   static TextStyle font16Blacksimebolde = TextStyle(
       fontSize: 16.sp, color: Colors.black, fontWeight: FontWeight.w700);
+    static TextStyle font16 = TextStyle(
+      fontSize: 16.sp, );
   static TextStyle font18simebolde =
       TextStyle(fontSize: 18.sp, fontWeight: FontWeight.w700);
   static TextStyle font20simebolde =
