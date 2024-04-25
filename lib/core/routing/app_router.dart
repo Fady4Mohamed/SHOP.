@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:shop/core/routing/routes.dart';
 import 'package:shop/features/auth/ui/login_screen.dart';
 import 'package:shop/features/auth/ui/register_screen.dart';
+import 'package:shop/features/cart/ui/screen/cart_screen.dart';
 import 'package:shop/features/category/ui/views/category_screen.dart';
 import 'package:shop/features/category/ui/views/specific_categories_screen.dart';
 import 'package:shop/features/home/ui/home_screen.dart';
@@ -52,6 +53,10 @@ class AppRouter {
         case Routes.searchScreen:
         return MaterialPageRoute(
           builder: (_) => const SearchScreen(),
+        );
+        case Routes.cartScreen:
+        return MaterialPageRoute(
+          builder: (_) => const CartScreen(),
         );
       // case Routes.loginScreen:
       //   return MaterialPageRoute(

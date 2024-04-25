@@ -2,6 +2,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:shop/core/helpers/exstintion.dart';
+import 'package:shop/core/routing/routes.dart';
 import 'package:shop/core/theming/color.dart';
 import 'package:shop/core/theming/styles.dart';
 
@@ -24,7 +26,7 @@ class HomeAppBar extends StatelessWidget {
           ],
         ), 
        const Spacer(),
-         IconButton(onPressed: (){}, icon:const Icon(Icons.local_grocery_store_outlined,color: ColorsManager.mainphosphorous ,))
+         IconButton(onPressed: (){context.pushNamed(Routes.cartScreen);}, icon:const Icon(Icons.local_grocery_store_outlined,color: ColorsManager.mainphosphorous ,))
       ],),
     );
   }
