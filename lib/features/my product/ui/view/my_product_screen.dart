@@ -18,7 +18,7 @@ class MyProductScreen extends StatelessWidget {
             height: 750.h,
             child: Column(
               children: [
-                FeaturAppBar(name: 'My Products'),
+               const FeaturAppBar(name: 'My Products'),
                 MyProductsListbuilder(
                 ),
                 SizedBox(

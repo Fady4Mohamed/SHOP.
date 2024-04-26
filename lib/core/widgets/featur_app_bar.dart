@@ -14,7 +14,7 @@ class FeaturAppBar extends StatelessWidget {
       padding:  EdgeInsets.only(top: 16.h),
       child: Row(
         children: [
-          SizedBox(width: 28.w,),
+          SizedBox(width: 20.w,),
           Container(
             decoration: BoxDecoration(
                 border: Border.all(color: Colors.grey),
