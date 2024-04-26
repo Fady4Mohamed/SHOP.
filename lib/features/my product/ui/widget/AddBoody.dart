@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shop/core/widgets/button.dart';
 import 'package:shop/core/widgets/text_field.dart';
+import 'package:shop/features/my%20product/ui/widget/category_drop_button.dart';
 import 'package:shop/features/my%20product/ui/widget/choice_image.dart';
 
 class AddBoody extends StatefulWidget {
@@ -9,14 +10,12 @@ class AddBoody extends StatefulWidget {
     super.key,
   });
 
-
   @override
   State<AddBoody> createState() => _AddBoodyState();
 }
 
 class _AddBoodyState extends State<AddBoody> {
   String? name;
-  String? category;
   String? description;
   double? salary;
   @override
@@ -24,7 +23,7 @@ class _AddBoodyState extends State<AddBoody> {
     return Column(
       children: [
         SizedBox(
-          height:600.h,
+          height: 600.h,
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 22.w),
             child: ListView(
@@ -50,16 +49,6 @@ class _AddBoodyState extends State<AddBoody> {
                   },
                 ),
                 SizedBox(
-                   height: 40.h,
-                ),
-                TextFieldApp(
-                  icon: Icons.copyright_outlined,
-                  hintText: 'category ',
-                  onChanged: (p0) {
-                    category = p0;
-                  },
-                ),
-                SizedBox(
                   height: 40.h,
                 ),
                 TextFieldApp(
@@ -70,18 +59,20 @@ class _AddBoodyState extends State<AddBoody> {
                   },
                 ),
                 SizedBox(
-                  height: 80.h,
+                  height: 40.h,
+                ),
+                CategoryDropButton(),
+                SizedBox(
+                  height: 40.h,
                 ),
                 ChoiceImage(),
                 SizedBox(
-                   height: 20.h,
+                  height: 20.h,
                 ),
                 ButtonApp(
-                    onPressed: () async {
-                    
-                    },
-                    titel: 'add',
-                  ),
+                  onPressed: () async {},
+                  titel: 'add',
+                ),
               ],
             ),
           ),

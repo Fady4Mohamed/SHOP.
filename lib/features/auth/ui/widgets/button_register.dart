@@ -11,11 +11,11 @@ class ButtonRegister extends StatefulWidget {
   const ButtonRegister({
     super.key,
     this.email,
-    this.password,
+    this.password, this.address,
   });
   final String? email;
   final String? password;
-
+  final String? address;
   @override
   State<ButtonRegister> createState() => _ButtonRegisterState();
 }
@@ -45,9 +45,9 @@ class _ButtonRegisterState extends State<ButtonRegister> {
       },
       child: ButtonApp(
         onPressed: () {
-          if (widget.email != null && widget.password != null) {
+          if (widget.email != null && widget.password != null&&widget.address!=null) {
             BlocProvider.of<RegisterCubit>(context)
-                .register(lemail: widget.email!, lpassword: widget.password!);
+                .register(lemail: widget.email!, lpassword: widget.password!,address: widget.address!);
           }
         },
         titel: 'Sign Up',

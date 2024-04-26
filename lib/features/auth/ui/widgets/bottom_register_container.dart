@@ -21,6 +21,7 @@ class BottomRegisterContainer extends StatefulWidget {
 class _BottomRegisterContainerState extends State<BottomRegisterContainer> {
   String? email;
   String? password;
+  String? address;
   @override
   Widget build(BuildContext context) {
     return BottomSheet(
@@ -55,6 +56,19 @@ class _BottomRegisterContainerState extends State<BottomRegisterContainer> {
               height: 24.h,
             ),
             TextFieldApp(
+              icon: Icons.place_outlined,
+              hintText: 'Address',
+              onChanged: (p0) {
+                setState(() {
+                  address = p0;
+                });
+              },
+              onTap: widget.onTapTextField,
+            ),
+            SizedBox(
+              height: 24.h,
+            ),
+            TextFieldApp(
               isPassword: true,
               icon: Icons.key_outlined,
               hintText: 'Password',
@@ -69,8 +83,10 @@ class _BottomRegisterContainerState extends State<BottomRegisterContainer> {
               height: 30.h,
             ),
             ButtonRegister(
+              address: address,
               email: email,
               password: password,
+
             ),
             SizedBox(
               height: 30.h,
