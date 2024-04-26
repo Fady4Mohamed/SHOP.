@@ -7,7 +7,7 @@ part 'register_state.dart';
 
 class RegisterCubit extends Cubit<RegisterState> {
   RegisterCubit() : super(RegisterInitial());
-  late final String email;
+  static late final String? email;
   static late final String? userid;
   void register({required String lemail, required String lpassword,required String address}) async {
     emit(Registerloding());
@@ -19,7 +19,7 @@ class RegisterCubit extends Cubit<RegisterState> {
         DocumentReference user = FirebaseFirestore.instance.collection('users').doc();
      
     user.set({
-      'address':address,
+     'address':address,
      'userid':user.id,
      'e-mail':lemail
     }).then((value) {

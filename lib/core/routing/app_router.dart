@@ -8,6 +8,7 @@ import 'package:shop/features/category/ui/views/category_screen.dart';
 import 'package:shop/features/category/ui/views/specific_categories_screen.dart';
 import 'package:shop/features/home/ui/home_screen.dart';
 import 'package:shop/features/my%20product/ui/view/add_product_screen.dart';
+import 'package:shop/features/my%20product/ui/view/my_product_details_screen.dart';
 import 'package:shop/features/my%20product/ui/view/my_product_screen.dart';
 import 'package:shop/features/orders/ui/screens/order_screen.dart';
 import 'package:shop/features/product/ui/screen/product_screen.dart';
@@ -62,6 +63,10 @@ class AppRouter {
         case Routes.productScreen:
         return MaterialPageRoute(
           builder: (_) => const ProductScreen(),
+        );
+        case Routes.myProductDetailsScreen:
+        return MaterialPageRoute(
+          builder: (_) => const MyProductDetailsScreen(),
         );
       // case Routes.loginScreen:
       //   return MaterialPageRoute(

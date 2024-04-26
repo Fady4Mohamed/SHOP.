@@ -6,7 +6,7 @@ part 'logincubit_state.dart';
 
 class LoginCubit extends Cubit<loginState> {
   LoginCubit() : super(logincubitInitial());
-  late final String email;
+  static late final String email;
   static late final String userid;
   void login({required String lemail, required String lpassword}) async {
     emit(logincubitloding());

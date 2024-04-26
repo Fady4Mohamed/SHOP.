@@ -5,9 +5,9 @@ class ProductModel {
   final String category;
   final String image;
   final String description;
-  final String? id;
+  final String id;
   ProductModel(
-      {this.id,
+      {required this.id,
       required this.ownerid,
       required this.description,
       required this.category,

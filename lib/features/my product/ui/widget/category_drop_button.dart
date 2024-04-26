@@ -1,6 +1,8 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shop/core/theming/styles.dart';
+import 'package:shop/features/my%20product/data/add%20cubit/add_cubit.dart';
 
 class CategoryDropButton extends StatefulWidget {
   const CategoryDropButton({
@@ -21,6 +23,7 @@ class _CategoryDropButtonState extends State<CategoryDropButton> {
         onChanged: (String? newValue) {
           setState(() {
             category=newValue!;
+            BlocProvider.of<AddCubit>(context).category=category;
           });
         },
         items:  [

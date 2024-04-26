@@ -16,7 +16,7 @@ class MyProductcontainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        context.pushNamed(Routes.productScreen);
+        context.pushNamed(Routes.myProductDetailsScreen);
       },
       child: Container(
         width: 300.w,
