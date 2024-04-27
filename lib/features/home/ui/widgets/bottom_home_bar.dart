@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shop/core/helpers/exstintion.dart';
 import 'package:shop/core/routing/routes.dart';
 import 'package:shop/core/theming/color.dart';
 import 'package:shop/features/home/ui/widgets/bottom_icon.dart';
+import 'package:shop/features/my%20product/data/fetch%20my%20product%20cubit/fetch_my_product_cubit.dart';
 
 class BottomHomeBar extends StatelessWidget {
   const BottomHomeBar({
@@ -36,6 +38,7 @@ class BottomHomeBar extends StatelessWidget {
           BottomIcon(
             icon: Icons.local_mall_outlined,
             onPressed: () {
+              BlocProvider.of<FetchMyProductCubit>(context).getmyProduct();
               context.pushNamed(Routes.myProductScreen);
             },
             name: 'My Product',
