@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:shop/core/models/product_model.dart';
 import 'category_item_image.dart';
 import 'category_item_information.dart';
 
 class ItemWithDetails extends StatelessWidget {
   const ItemWithDetails({
-    super.key,
+    super.key, required this.product,
   });
+  final ProductModel product; 
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -16,12 +18,12 @@ class ItemWithDetails extends StatelessWidget {
         child: Row(
           children: [
             CategoryItemImage(
-              image: 'assets/image/pitzza.jpg',
+              image: product.image,
             ),
             SizedBox(
               width: 20.h,
             ),
-            CategoryItemInformation(),
+            CategoryItemInformation(product: product,),
           ],
         ),
       ),

@@ -1,18 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:shop/core/models/product_model.dart';
 import 'package:shop/features/category/ui/widget/category_item.dart';
 
 class CategoryItemList extends StatelessWidget {
   const CategoryItemList({
-    super.key,
+    super.key, required this.products,
   });
+  final List<ProductModel> products;
   @override
   Widget build(BuildContext context) {
     return Expanded(
       child: ListView.builder(
-        itemCount: 7,
+        itemCount: products.length,
         padding: const EdgeInsets.all(0),
         itemBuilder: (context, index) {
-          return ItemWithDetails();
+          return ItemWithDetails(product: products[index],);
         },
       ),
     );

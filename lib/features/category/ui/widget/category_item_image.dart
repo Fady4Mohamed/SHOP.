@@ -17,7 +17,7 @@ class CategoryItemImage extends StatelessWidget {
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8.w),
               image:
-                  DecorationImage(image: AssetImage(image), fit: BoxFit.fill)),
+                  DecorationImage(image: NetworkImage(image), fit: BoxFit.fill)),
         ),
       ),
     );

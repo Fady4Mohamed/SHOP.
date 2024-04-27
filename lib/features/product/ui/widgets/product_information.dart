@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:shop/core/models/product_model.dart';
 import 'package:shop/core/theming/color.dart';
 import 'package:shop/core/theming/styles.dart';
 import 'package:shop/features/product/ui/widgets/amount_container.dart';
@@ -7,8 +8,9 @@ import 'package:shop/features/product/ui/widgets/line.dart';
 
 class ProductInformation extends StatelessWidget {
   const ProductInformation({
-    super.key,
+    super.key, required this.product,
   });
+final ProductModel product;
 
   @override
   Widget build(BuildContext context) {
@@ -22,13 +24,13 @@ class ProductInformation extends StatelessWidget {
           SizedBox(
             width: 250.w,
             child: Text(
-              'lenovo laptop gaming 1999 ssd 250',
+             product.name,
               style: TextStyles.font16,
             ),
           ),
           SizedBox(height: 10.h),
           Text(
-            r'$1250',
+            r'$''${product.price}',
             style: TextStyles.font16
                 .copyWith(color: ColorsManager.mainphosphorous),
           ),
@@ -55,8 +57,8 @@ class ProductInformation extends StatelessWidget {
           SizedBox(
               width: 340.w,
               child: Text(
-                'fhg vghg hbsaf afbahbf fahbfghja bdjvf a bavhvf gavhfgd fbfvjv f abfjhva f fhbajlfa fa fhb  afbdjh  d fkhbjfvgkvfjhhvf  hvfgvdfn bbljv jjhvj gvhkch gvhcgjfgf gf jgcfgfcc n hgchfjgc nb vkhgcfxjcb jvkghcj nb gvhjfcj kgffddfg',
-                style: TextStyles.font14greyregular,
+                product.description, style: TextStyles.font14greyregular, maxLines:7 ,overflow: TextOverflow.ellipsis
+                ,
               )),
         ],
       ),

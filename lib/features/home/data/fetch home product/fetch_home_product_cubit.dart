@@ -8,7 +8,7 @@ part 'fetch_home_product_state.dart';
 class FetchHomeProductCubit extends Cubit<FetchHomeProductState> {
   FetchHomeProductCubit() : super(FetchHomeProductInitial());
   List<ProductModel> products = [];
-  getmyProduct() async {
+  getAllProduct() async {
     products.clear();
     emit(FetchHomeProductLoding());
     try {

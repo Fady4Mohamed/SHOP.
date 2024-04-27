@@ -14,7 +14,7 @@ class ProductHomeItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        context.pushNamed(Routes.productScreen);
+        context.pushNamed(Routes.productScreen,arguments: product);
       },
       child: SizedBox(
         height: 200.h,

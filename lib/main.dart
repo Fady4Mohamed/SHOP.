@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
           create: (context) => FetchMyProductCubit(),
         ),
         BlocProvider(
-          create: (context) => FetchHomeProductCubit()..getmyProduct(),
+          create: (context) => FetchHomeProductCubit()..getAllProduct(),
         ),
       ],
       child: ShopApp(
