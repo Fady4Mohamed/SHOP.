@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shop/core/routing/app_router.dart';
 import 'package:shop/features/auth/data/logincubit/logincubit_cubit.dart';
 import 'package:shop/features/auth/data/registercubit/register_cubit.dart';
+import 'package:shop/features/home/data/fetch%20home%20product/fetch_home_product_cubit.dart';
 import 'package:shop/features/my%20product/data/fetch%20my%20product%20cubit/fetch_my_product_cubit.dart';
 import 'package:shop/firebase_options.dart';
 import 'package:shop/shop_app.dart';
@@ -31,6 +32,9 @@ class MyApp extends StatelessWidget {
           create: (context) => RegisterCubit(),
         ),BlocProvider(
           create: (context) => FetchMyProductCubit(),
+        ),
+        BlocProvider(
+          create: (context) => FetchHomeProductCubit()..getmyProduct(),
         ),
       ],
       child: ShopApp(

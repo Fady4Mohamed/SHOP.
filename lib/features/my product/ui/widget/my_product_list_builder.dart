@@ -13,12 +13,16 @@ class MyProductsListbuilder extends StatelessWidget {
     return BlocBuilder<FetchMyProductCubit, FetchMyProductState>(
       builder: (context, state) {
         if (state is FetchMyProductsuccsed) {
-  return MyProductList(myProductList: BlocProvider.of<FetchMyProductCubit>(context).myProduct,);
-}if (state is FetchMyProductfailer) {
-  return const Expanded(child: Text('erorr'));
-}else{
-  return const Expanded(child: Text('loding'));
-}
+          return MyProductList(
+            myProductList:
+                BlocProvider.of<FetchMyProductCubit>(context).myProduct,
+          );
+        }
+        if (state is FetchMyProductfailer) {
+          return Text('erorr');
+        } else {
+          return Text('loding');
+        }
       },
     );
   }
