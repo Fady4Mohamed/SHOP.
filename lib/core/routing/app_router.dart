@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:shop/core/models/product_model.dart';
 import 'package:shop/core/routing/routes.dart';
 import 'package:shop/features/auth/ui/login_screen.dart';
 import 'package:shop/features/auth/ui/register_screen.dart';
@@ -66,7 +67,7 @@ class AppRouter {
         );
         case Routes.myProductDetailsScreen:
         return MaterialPageRoute(
-          builder: (_) => const MyProductDetailsScreen(),
+          builder: (_) =>  MyProductDetailsScreen(product:arguments as ProductModel ,),
         );
       // case Routes.loginScreen:
       //   return MaterialPageRoute(

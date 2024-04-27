@@ -11,6 +11,7 @@ class FetchMyProductCubit extends Cubit<FetchMyProductState> {
   final String username = LoginCubit.email;
   List<ProductModel> myProduct = [];
   getmyProduct() async {
+    myProduct.clear();
     emit(FetchMyProductloding());
     try {
   QuerySnapshot data =

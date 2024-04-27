@@ -25,9 +25,9 @@ class CartProductcontainer extends StatelessWidget {
       ], color:ColorsManager.lightBlack, borderRadius: BorderRadius.circular(20)),
       child: Row(
         children: [
-          MyProductImage(),
+        //  MyProductImage(),
           Spacer(),
-          MyProductData(),
+          //MyProductData(),
           Spacer(
             flex: 2,
           ),

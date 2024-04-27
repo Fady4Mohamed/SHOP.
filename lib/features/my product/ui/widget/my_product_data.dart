@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:shop/core/models/product_model.dart';
 import 'package:shop/core/theming/color.dart';
 import 'package:shop/core/theming/styles.dart';
 
 class MyProductData extends StatelessWidget {
   const MyProductData({
-    super.key,
+    super.key, required this.product,
   });
-
+final ProductModel product;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -16,7 +17,7 @@ class MyProductData extends StatelessWidget {
         SizedBox(
             width: 160.w,
             child: Text(
-              'pitzv fza',
+              product.name,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
               style: TextStyles.font18simebolde,
@@ -26,7 +27,7 @@ class MyProductData extends StatelessWidget {
           child: Row(
             children: [
               Text(
-                r'$230000',
+                r'$''${product.price}',
                 style: TextStyles.font18simebolde,
               ),
               Spacer(),
@@ -38,7 +39,7 @@ class MyProductData extends StatelessWidget {
                   child: Row(
                     children: [
                       Text(
-                        '  13  ',
+                        '  0  ',
                         style
                             : TextStyles.font11Black,
                       ),

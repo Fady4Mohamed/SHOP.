@@ -17,7 +17,7 @@ class CartScreen extends StatelessWidget {
           SizedBox(
             height: 10.h,
           ),
-          MyProductList(),
+        //  MyProductList(),
           SizedBox(
             height: 10.h,
           ),

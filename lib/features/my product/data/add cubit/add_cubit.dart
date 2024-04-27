@@ -16,7 +16,7 @@ class AddCubit extends Cubit<AddState> {
   Future<void> addproduct(
       {required String description,
       required String name,
-      required String price,
+      required double price,
       required String image}) async {
     if (category != 'category') {
       emit(AddLoding());

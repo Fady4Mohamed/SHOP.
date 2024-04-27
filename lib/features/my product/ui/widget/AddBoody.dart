@@ -84,7 +84,7 @@ class _AddBoodyState extends State<AddBoody> {
                       BlocProvider.of<AddCubit>(context).addproduct(
                           description: description!,
                           image: url,
-                          price: salary!.toString(),
+                          price: salary!.toDouble(),
                           name: name!);
                     }
                   },
