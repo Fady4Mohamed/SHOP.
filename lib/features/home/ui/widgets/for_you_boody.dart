@@ -29,9 +29,11 @@ class ForYouBoody extends StatelessWidget {
               );
             }
             if (state is FetchHomeProductFailure) {
-              return const Expanded(child: Text('erorr'));
+              return SizedBox(
+                  height: 210.h, child: Center(child: Text('erorr')));
             } else {
-              return const Expanded(child: Text('loding'));
+              return SizedBox(
+                  height: 210.h, child: Center(child: Text('erorr')));
             }
           },
         )

@@ -13,6 +13,7 @@ import 'package:shop/features/my%20product/ui/view/add_product_screen.dart';
 import 'package:shop/features/my%20product/ui/view/my_product_details_screen.dart';
 import 'package:shop/features/my%20product/ui/view/my_product_screen.dart';
 import 'package:shop/features/orders/ui/screens/order_screen.dart';
+import 'package:shop/features/product/data/cubit/product_manager_cubit.dart';
 import 'package:shop/features/product/ui/screen/product_screen.dart';
 import 'package:shop/features/search/ui/screen/search_screen.dart';
 
@@ -69,8 +70,11 @@ class AppRouter {
         );
       case Routes.productScreen:
         return MaterialPageRoute(
-          builder: (_) => ProductScreen(
-            product: arguments as ProductModel,
+          builder: (_) => BlocProvider(
+      create: (context) => ProductManagerCubit(),
+            child: ProductScreen(
+              product: arguments as ProductModel,
+            ),
           ),
         );
       case Routes.myProductDetailsScreen:

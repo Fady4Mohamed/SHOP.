@@ -42,7 +42,7 @@ final ProductModel product;
                   'Electronic',
                   style: TextStyles.font14greyregular,
                 ),const Spacer(),
-                AmountContainer(),
+               const AmountContainer(),
                 SizedBox(width: 10.w,),
               ],
             ),

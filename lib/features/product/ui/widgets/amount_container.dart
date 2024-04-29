@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shop/core/theming/color.dart';
 import 'package:shop/core/theming/styles.dart';
+import 'package:shop/features/product/data/cubit/product_manager_cubit.dart';
 
 class AmountContainer extends StatefulWidget {
   const AmountContainer({
@@ -33,6 +35,8 @@ class _AmountContainerState extends State<AmountContainer> {
               onPressed: () {
                 setState(() {
                   amount++;
+                  BlocProvider.of<ProductManagerCubit>(context)
+                          .amount=amount;
                 });
               },
               icon: Icon(
@@ -48,6 +52,8 @@ class _AmountContainerState extends State<AmountContainer> {
                 if (amount != 1) {
                   setState(() {
                     amount--;
+                    BlocProvider.of<ProductManagerCubit>(context)
+                          .amount=amount;
                   });
                 }
               },

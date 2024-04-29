@@ -14,12 +14,13 @@ class TrindingBoody extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         Padding(
-          padding: EdgeInsets.only(left:20.h ,top: 20.h,bottom: 12.h ),
+          padding: EdgeInsets.only(left: 20.h, top: 20.h, bottom: 12.h),
           child: Text(
             'Trinding',
             style: TextStyles.font18simebolde,
           ),
-        ),BlocBuilder<FetchHomeProductCubit, FetchHomeProductState>(
+        ),
+        BlocBuilder<FetchHomeProductCubit, FetchHomeProductState>(
           builder: (context, state) {
             if (state is FetchHomeProductSuccess) {
               return ProductHomelist(
@@ -28,9 +29,11 @@ class TrindingBoody extends StatelessWidget {
               );
             }
             if (state is FetchHomeProductFailure) {
-              return const Expanded(child: Text('erorr'));
+              return SizedBox(
+                  height: 210.h, child: Center(child: Text('erorr')));
             } else {
-              return const Expanded(child: Text('loding'));
+              return SizedBox(
+                  height: 210.h, child: Center(child: Text('loding')));
             }
           },
         )
