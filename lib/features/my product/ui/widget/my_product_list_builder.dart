@@ -19,9 +19,9 @@ class MyProductsListbuilder extends StatelessWidget {
           );
         }
         if (state is FetchMyProductfailer) {
-          return Text('erorr');
+          return const Expanded(child: Text('erorr'));
         } else {
-          return Text('loding');
+          return const Expanded(child: Text('loding'));
         }
       },
     );

@@ -12,6 +12,8 @@ import 'package:shop/features/home/ui/home_screen.dart';
 import 'package:shop/features/my%20product/ui/view/add_product_screen.dart';
 import 'package:shop/features/my%20product/ui/view/my_product_details_screen.dart';
 import 'package:shop/features/my%20product/ui/view/my_product_screen.dart';
+import 'package:shop/features/orders/data/manager/ordder%20cubit/order_cubit.dart';
+import 'package:shop/features/orders/data/manager/order%20confirm%20cubit/order_confirm_cubit.dart';
 import 'package:shop/features/orders/ui/screens/order_screen.dart';
 import 'package:shop/features/product/data/cubit/product_manager_cubit.dart';
 import 'package:shop/features/product/ui/screen/product_screen.dart';
@@ -58,7 +60,17 @@ class AppRouter {
         );
       case Routes.orderScreen:
         return MaterialPageRoute(
-          builder: (_) => const OrderScreen(),
+          builder: (_) => MultiBlocProvider(
+            providers: [
+              BlocProvider(
+                create: (context) => OrderCubit()..getAllorders(),
+              ),
+              BlocProvider(
+                create: (context) => OrderConfirmCubit(),
+              ),
+            ],
+            child: const OrderScreen(),
+          ),
         );
       case Routes.searchScreen:
         return MaterialPageRoute(
@@ -71,7 +83,7 @@ class AppRouter {
       case Routes.productScreen:
         return MaterialPageRoute(
           builder: (_) => BlocProvider(
-      create: (context) => ProductManagerCubit(),
+            create: (context) => ProductManagerCubit(),
             child: ProductScreen(
               product: arguments as ProductModel,
             ),

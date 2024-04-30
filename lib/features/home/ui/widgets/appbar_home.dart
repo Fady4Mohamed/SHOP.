@@ -6,6 +6,7 @@ import 'package:shop/core/helpers/exstintion.dart';
 import 'package:shop/core/routing/routes.dart';
 import 'package:shop/core/theming/color.dart';
 import 'package:shop/core/theming/styles.dart';
+import 'package:shop/features/auth/data/logincubit/logincubit_cubit.dart';
 
 class HomeAppBar extends StatelessWidget {
   const HomeAppBar({
@@ -22,7 +23,7 @@ class HomeAppBar extends StatelessWidget {
           children: [
             Text('delivery address',style: TextStyles.font14.copyWith(color: ColorsManager.mainphosphorous),),
             SizedBox(height: 4.h,),
-            Text('bahary algomrk , Alexandry',style: TextStyles.font14),
+            Text(LoginCubit.useraddress??'error',style: TextStyles.font14),
           ],
         ), 
        const Spacer(),

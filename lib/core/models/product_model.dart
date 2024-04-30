@@ -23,6 +23,6 @@ class ProductModel {
         price: jsonData['price'],
         id: jsonData['id'],
         name: jsonData['name'],
-        ownerid: jsonData['name']);
+        ownerid: jsonData['ownerid']);
   }
 }

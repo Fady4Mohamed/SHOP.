@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shop/core/theming/styles.dart';
-import 'package:shop/core/widgets/button.dart';
 import 'package:shop/core/widgets/featur_app_bar.dart';
 import 'package:shop/features/cart/data/cart%20cubit/add_to_cart_cubit.dart';
 import 'package:shop/features/cart/ui/widgets/cart_list.dart';
+import 'package:shop/features/cart/ui/widgets/complet_order_button.dart';
 
 class CartScreen extends StatefulWidget {
   const CartScreen({super.key});
@@ -15,6 +15,10 @@ class CartScreen extends StatefulWidget {
 }
 
 class _CartScreenState extends State<CartScreen> {
+@override
+  void dispose() {
+    super.dispose();
+  }
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -28,7 +32,6 @@ class _CartScreenState extends State<CartScreen> {
           BlocListener<AddToCartCubit, AddToCartState>(
             listener: (context, state) {
               if (state is AddToCartflagetrue) {
-                print('object');
                 setState(() {});
               }
             },
@@ -44,7 +47,7 @@ class _CartScreenState extends State<CartScreen> {
           SizedBox(
             height: 10.h,
           ),
-          ButtonApp(onPressed: () {}, titel: 'complet order'),
+          const CompletOrderButton(),
           SizedBox(
             height: 30.h,
           )
@@ -53,3 +56,4 @@ class _CartScreenState extends State<CartScreen> {
     ));
   }
 }
+

@@ -8,6 +8,7 @@ class LoginCubit extends Cubit<loginState> {
   LoginCubit() : super(logincubitInitial());
   static late final String email;
   static late final String userid;
+  static late final String useraddress;
   void login({required String lemail, required String lpassword}) async {
     emit(logincubitloding());
     try {
@@ -20,6 +21,7 @@ class LoginCubit extends Cubit<loginState> {
           .where('e-mail', isEqualTo: lemail)
           .get();
           userid= user.docs[0]['userid'];
+          useraddress= user.docs[0]['address'];
       email = lemail;
       emit(logincubitsuccess());
     } on FirebaseAuthException catch (e) {
