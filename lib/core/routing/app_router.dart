@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shop/core/models/product_model.dart';
 import 'package:shop/core/routing/routes.dart';
+import 'package:shop/features/account/ui/screen/account_screen.dart';
 import 'package:shop/features/auth/ui/login_screen.dart';
 import 'package:shop/features/auth/ui/register_screen.dart';
 import 'package:shop/features/cart/ui/screen/cart_screen.dart';
@@ -95,13 +96,10 @@ class AppRouter {
             product: arguments as ProductModel,
           ),
         );
-      // case Routes.loginScreen:
-      //   return MaterialPageRoute(
-      //     builder: (_) => BlocProvider(
-      //       create: (context) => getIt<LoginCubit>(),
-      //       child: const LoginScreen(),
-      //     ),
-      //   );
+      case Routes.accountScreen:
+        return MaterialPageRoute(
+          builder: (_) => const AccountScreen(),
+        );
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(

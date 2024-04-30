@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:shop/core/theming/color.dart';
 
 class TextStyles {
   static TextStyle font24Bold = TextStyle(
     fontSize: 24.sp,
     fontWeight: FontWeight.bold,
+  );
+  static TextStyle font50Bold = TextStyle(
+    fontSize: 50.sp,
+    fontWeight: FontWeight.bold,
+    color:ColorsManager.mainphosphorous 
   );
   static TextStyle font14greyregular =
       TextStyle(fontSize: 14.sp, color: const Color(0xff808080));
@@ -23,4 +29,6 @@ class TextStyles {
     fontSize: 11.sp,
     color: Colors.black,
   );
+  static TextStyle font18greyregular =
+      TextStyle(fontSize: 18.sp, color: const Color(0xff808080));
 }

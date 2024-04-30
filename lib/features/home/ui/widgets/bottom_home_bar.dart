@@ -52,8 +52,10 @@ class BottomHomeBar extends StatelessWidget {
           ),
           BottomIcon(
             icon: Icons.person_outline,
-            onPressed: () {},
-            name: 'Profile',
+            onPressed: () {
+              context.pushNamed(Routes.accountScreen);
+            },
+            name: 'Account',
           ),
         ],
       ),

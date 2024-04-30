@@ -32,9 +32,9 @@ class LoginCubit extends Cubit<loginState> {
             logincubitfailure(error: 'Wrong password provided for that user.'));
       }
     } catch (e) {
-     
+     print(e);
       emit(logincubitfailure(error: 'there was an error'));
-       print(e);
+       
     }
   }
 }

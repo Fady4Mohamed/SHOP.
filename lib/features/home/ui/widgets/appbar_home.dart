@@ -23,7 +23,7 @@ class HomeAppBar extends StatelessWidget {
           children: [
             Text('delivery address',style: TextStyles.font14.copyWith(color: ColorsManager.mainphosphorous),),
             SizedBox(height: 4.h,),
-            Text(LoginCubit.useraddress??'error',style: TextStyles.font14),
+            Text(LoginCubit.useraddress,style: TextStyles.font14),
           ],
         ), 
        const Spacer(),
